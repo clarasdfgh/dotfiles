@@ -97,7 +97,12 @@ deploy () {
 
 #	Dependencies deploy for ArchLinux only
 	if confirm  "Install dotfiles' missing dependencies"; then
+	#	Antigen (zsh plugin manager)
 		curl -L git.io/antigen > ~/.antigen.zsh;
+	#	Vundle (vim plugin manager)
+		git clone https://github.com/VundleVim/Vundle.vim.git \
+		          ~/.vim/bundle/Vundle.vim
+		vim +"so ~/.vimrc" +PluginInstall +qall
 	fi
 }
 
