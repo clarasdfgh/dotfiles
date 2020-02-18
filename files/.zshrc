@@ -77,7 +77,7 @@ alias em="ranger ~/Music"
 alias ep="ranger ~/Pictures"
 alias ev="ranger ~/Videos"
 
-alias er="ranger ~/Documents/Repositories"
+alias er="ranger ~/Documents/Repositorios"
 alias eui="ranger ~/Documents/UGR/ugr-informatica"
 
 # Vim commands (I use them by mistake more than I would admit while sober)
