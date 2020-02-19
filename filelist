@@ -1,3 +1,4 @@
+.config/kitty/kitty.conf
 .vim/colors/atom-dark-256.vim
 .vimrc
 .zshrc
