@@ -32,10 +32,10 @@ filesdeploy () {
 	if confirm  "Install dotfiles' missing dependencies"; then
 	#	Antigen (zsh plugin manager)
 		curl -L git.io/antigen > ~/.antigen.zsh;
-	#	Vundle (vim plugin manager)
-		git clone https://github.com/VundleVim/Vundle.vim.git \
-		          ~/.vim/bundle/Vundle.vim
-		vim +"so ~/.vimrc" +PluginInstall +qall
+	#	Plug (vim plugin manager)
+		curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+		vim +"so ~/.vimrc" +PlugInstall +qall
+		ln -s ~/.vim/UltiSnips/tex.snippets ~/.vim/UltiSnips/plaintex.snippets
 	fi
 }
-
