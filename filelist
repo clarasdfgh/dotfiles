@@ -1,5 +1,6 @@
 .config/kitty/kitty.conf
 .config/mimeapps.list
+.profile
 .vim/colors/atom-dark-256.vim
 .vimrc
 .zshrc
