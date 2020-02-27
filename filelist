@@ -1,5 +1,6 @@
 .config/kitty/kitty.conf
 .config/mimeapps.list
+.config/optimus-manager/Optimus Manager.conf
 .profile
 .vim/UltiSnips/tex.snippets
 .vim/UltiSnips/xml.snippets
