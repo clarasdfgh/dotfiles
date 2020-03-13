@@ -26,6 +26,7 @@ filesdeploy () {
 
 			cp files/"$line" ~/"$dest"
 		done < filelist
+		ln -s ~/.vim/UltiSnips/tex.snippets ~/.vim/UltiSnips/plaintex.snippets
 	fi
 
 #	Dependencies deploy
@@ -36,6 +37,5 @@ filesdeploy () {
 		curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 		vim +"so ~/.vimrc" +PlugInstall +qall
-		ln -s ~/.vim/UltiSnips/tex.snippets ~/.vim/UltiSnips/plaintex.snippets
 	fi
 }
