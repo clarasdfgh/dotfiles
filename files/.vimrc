@@ -46,6 +46,8 @@ set wrap linebreak        " Lines break on window border
 " ------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'Jorengarenar/fauxClip'
+
 " Airline {{{2
 " ------------
 " The airline is the bar that is shown at the bottom of the screen. It shows
@@ -180,15 +182,36 @@ call plug#end()            " required
 
 " }}}1
 
+" Commands {{{1
+" -------------
+" Commands defined by me to automate various tasks.
+
+" Translate Markdown bold text to LaTeX textbf
+command MDTexBf execute "%s/\\*\\{2\\}\\([^\\*\\{2\\}]\\+\\)\\*\\{2\\}/\\\\textbf{\\1}/g"
+" Translate Markdown 1st level titling to LaTeX chapter
+command MDTexChapter execute "%s/^# \\+[^-a-zA-Z]*-\\? *\\(.\\+\\)$/\\\\chapter{\\1}/g"
+" Translate Markdown inline code to LaTeX style code
+command MDTexInlineCode execute "%s/`\\([^`]\\+\\)`/\\\\code{\\1}/g"
+" Translate Markdown inline code to LaTeX style code using texttt
+command MDTexInlineCodeTTT execute "%s/`\\([^`]\\+\\)`/\\\\texttt{\\1}/g"
+" Translate Markdown 2nd level titling to LaTeX section
+command MDTexSection execute "%s/^## \\+[^-a-zA-Z]*-\\? *\\(.\\+\\)$/\\\\section{\\1}/g"
+" Translate Markdown 3rd level titling to LaTeX subsection
+command MDTexSubsection execute "%s/^### \\+[^-a-zA-Z]*-\\? *\\(.\\+\\)$/\\\\subsection{\\1}/g"
+
+" }}}1
+
 " Mappings {{{1
 " -------------
 " Custom key mappings to make the use of Vim much more comfortable.
 
-" Move through window splits with ^[HJKL]
+" Move through window splits with ^[HJKL] {{{2
 nmap <silent> <C-K> :wincmd k<CR>
 nmap <silent> <C-J> :wincmd j<CR>
 nmap <silent> <C-H> :wincmd h<CR>
 nmap <silent> <C-L> :wincmd l<CR>
+
+" }}}2
 
 " }}}1
 
