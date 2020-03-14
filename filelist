@@ -1,3 +1,10 @@
+.config/i3/config
+.config/i3/launchscripts/entr.sh
+.config/i3/launchscripts/nm-applet.sh
+.config/i3/launchscripts/picom.sh
+.config/i3/launchscripts/polybar.sh
+.config/i3/launchscripts/redshift.sh
+.config/i3/scripts/touchpad_toggle.sh
 .config/kitty/kitty.conf
 .config/mimeapps.list
 .config/optimus-manager/Optimus Manager.conf
