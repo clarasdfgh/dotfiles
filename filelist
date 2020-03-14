@@ -8,6 +8,7 @@
 .config/kitty/kitty.conf
 .config/mimeapps.list
 .config/optimus-manager/Optimus Manager.conf
+.local/share/fonts/siji.pcf
 .profile
 .vim/UltiSnips/tex.snippets
 .vim/UltiSnips/xml.snippets
