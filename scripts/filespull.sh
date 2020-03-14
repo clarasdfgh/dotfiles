@@ -14,11 +14,10 @@ filespull () {
 		mkdir files
 
 		while read -r line; do
-			directory="$(echo "$line" | sed 's/'"$(basename "$line")"'//')"
+			directory="$(echo "$line" | sed 's/'"$(basename "$line")"'$//')"
 
 			mkdir -p files/"$directory"
 			cp ~/"$line" files/"$directory"/"$(basename "$line")"
 		done < filelist
 	fi
 }
-
