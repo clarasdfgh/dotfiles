@@ -8,6 +8,16 @@
 .config/kitty/kitty.conf
 .config/mimeapps.list
 .config/optimus-manager/Optimus Manager.conf
+.config/polybar/bars.ini
+.config/polybar/colors.ini
+.config/polybar/config.ini
+.config/polybar/launch.sh
+.config/polybar/modules.ini
+.config/polybar/scripts/launcher
+.config/polybar/scripts/launcher-alt
+.config/polybar/scripts/powermenu
+.config/polybar/scripts/powermenu-alt
+.config/polybar/user_modules.ini
 .local/share/fonts/siji.pcf
 .profile
 .vim/UltiSnips/tex.snippets

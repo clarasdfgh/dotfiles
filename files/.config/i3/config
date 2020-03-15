@@ -276,7 +276,7 @@ bindsym $meta+ShiftReturn  exec                 "$TERMINAL && floating enable"
 bindsym $meta+$alt+c       reload
 
 # Start Rofi, a program launcher
-bindsym $meta+d            exec                 ~/.config/polybar/scripts/launcher-alt
+bindsym $meta+d            exec                 ~/.config/polybar/scripts/launcher
 
 # Start the default file manager
 bindsym $meta+e            exec                 $filemanager
