@@ -10,10 +10,11 @@
 # ==============================================================================
 
 # If redshift is running, kill it to prevent multiple instances
-if pgrep redshift; then
-	redshift -x;
-	killall -q redshift;
+if ps -A | grep redshift; then
+	killall -q redshift
+	#while pgrep -u $UID -x nm-applet >/dev/null; do sleep 1; done
 fi
 
 # Launch redshift
 redshift
+

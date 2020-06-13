@@ -9,7 +9,7 @@
 # ==============================================================================
 
 # If nm-applet is running, kill it to prevent multiple instances
-if pgrep nm-applet; then
+if ps -A | grep nm-applet; then
 	killall -q nm-applet
 	#while pgrep -u $UID -x nm-applet >/dev/null; do sleep 1; done
 fi

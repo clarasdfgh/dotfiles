@@ -6,12 +6,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ==============================================================================
-# ENVIRONMENT VARIABLES
-# ==============================================================================
-
-set RANGER_LOAD_DEFAULT_RC=FALSE
-
-# ==============================================================================
 # ANTIGEN SETTINGS
 # ==============================================================================
 
@@ -48,7 +42,7 @@ antigen apply
 alias entrconf="vim ~/.config/i3/launchscripts/entr.sh"
 alias i3conf="vim ~/.config/i3/config"
 alias kittyconf="vim ~/.config/kitty/kitty.conf"
-alias rangerconf="vim ~/.config/ranger/rc.conf"
+alias lfconf="vim ~/.config/lf/rc.conf"
 alias mimeconf="vim ~/.config/mimeapps.list"
 alias roficonf="vim ~/.config/rofi/config.rasi"
 alias vimconf="vim ~/.vimrc"
@@ -66,16 +60,16 @@ alias forwebm="for i in *.webm; do"
 alias forzip="for i in *.zip; do"
 
 # Ranger (based con $meta+e for "explorer" + locations in my computer)
-alias e="ranger"
+alias e="lf"
 
-alias edoc="ranger ~/Documents"
-alias edown="ranger ~/Downloads"
-alias em="ranger ~/Music"
-alias ep="ranger ~/Pictures"
-alias ev="ranger ~/Videos"
+alias edoc="lf ~/Documents"
+alias edown="lf ~/Downloads"
+alias em="lf ~/Music"
+alias ep="lf ~/Pictures"
+alias ev="lf ~/Videos"
 
-alias er="ranger ~/Documents/Repositorios"
-alias eui="ranger ~/Documents/UGR/ugr-informatica"
+alias er="lf ~/Documents/Repositorios"
+alias eui="lf ~/Documents/UGR/ugr-informatica"
 
 # Vim commands (I use them by mistake more than I would admit while sober)
 alias q="exit"
@@ -101,8 +95,9 @@ eval $(thefuck --alias)
 # Fetch properties
 export HOSTNAME="grocpc"
 export PF_INFO="ascii title os kernel wm pkgs shell uptime"
-pfetch
 
 # History
 SAVEHIST=100000
 HISTFILE=~/.zsh_history
+
+

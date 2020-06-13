@@ -10,14 +10,14 @@
 # ==============================================================================
 
 # If entr is running, kill it to prevent multiple instances
-if pgrep entr; then
+if ps -A | grep entr; then
 	killall -q entr
 	#while pgrep -u $UID -x entr >/dev/null; do sleep 1; done
 fi
 
 # Launch a new terminal when zsh's config is updated
-echo ~/.zshrc | entr -p kitty &
+echo ~/.zshrc | entr -p kitty
 
 # Reload i3wm when the config file is updated
-echo ~/.config/i3/config | entr -p i3 reload &
+echo ~/.config/i3/config | entr -p i3 reload
 

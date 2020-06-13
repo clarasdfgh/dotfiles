@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # ==============================================================================
 # GROCTEL'S TOUCHPAD TOGGLER FOR I3WM
 # ------------------------------------------------------------------------------
@@ -8,9 +6,9 @@
 # This script is designed to be run from an keysym.
 # ==============================================================================
 
-status=$(synclient | grep TapButton1 | awk '{print $3;}')
+declare -i status=$(synclient | grep TapButton1 | awk '{print $3;}')
 
-if [ "$status" -eq 1 ]; then
+if [ $status -eq 1 ]; then
 	synclient TapButton1=0;
 else
 	synclient TapButton1=1;
