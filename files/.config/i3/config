@@ -26,6 +26,14 @@ set $meta       Mod4
 set $modeswitch Mod5
 
 
+# Some sets for spotify functions
+set $spotiplay dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify\
+					  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+set $spotinext dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify\
+					  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+set $spotiprev dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify\
+					  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
 # ==============================================================================
 # GLOBAL VARIABLES
 # ------------------------------------------------------------------------------
@@ -266,6 +274,11 @@ bindsym XF86MonBrightnessDown exec light -U 15 && $refresh_i3status
 
 # Change screen brightness directly to a minimum with Light
 bindsym $meta+Shift+o			exec light -S 1  && $refresh_i3status
+
+# Spotify commands
+bindsym XF86AudioPlay exec $spotiplay
+bindsym XF86AudioNext exec $spotinext
+bindsym XF86AudioPrev exec $spotiprev
 
 # ==============================================================================
 # CUSTOM KEYSIMS
