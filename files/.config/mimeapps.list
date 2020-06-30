@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=gimp.desktop;org.gnome.Evince.desktop;firefox.desktop;qpdfview.desktop;
+application/pdf=qpdfview.desktop;gimp.desktop;org.gnome.Evince.desktop;firefox.desktop;
 application/x-shellscript=atom.desktop;org.gnome.gedit.desktop;
 application/x-xpinstall=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
